@@ -28,14 +28,14 @@ $(function() {
 
 //After clicking on a button 'Delete', delete the item from the list
 $(function() {
-  $('.shopping-item-delete').click(function(event) {
-    $(this).closest('li').remove();
-  })
+    $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
+      $(this).closest('li').remove();
+    })
 })
 
 //After clicking on a button 'Check', check and uncheck items on the list
 $(function() {
-  $('.shopping-item-toggle').click(function(event) {
+  $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
     $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
   })
 })
